@@ -1,0 +1,64 @@
+﻿<Window x:Class="PRACTICA_20.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PRACTICA_20"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Номер счета -->
+        <Label Content="Номер счета:" Grid.Row="0"/>
+        <TextBox Grid.Row="0" Width="200" Margin="300,0,300,26" Grid.RowSpan="2"/>
+
+        <!-- Тип вклада -->
+        <Label Content="Тип вклада:" Grid.Row="1"/>
+        <ComboBox Grid.Row="1" Grid.Column="1" Width="200">
+            <ComboBoxItem Content="Текущий"/>
+            <ComboBoxItem Content="Сберегательный"/>
+            <ComboBoxItem Content="Депозитный"/>
+        </ComboBox>
+
+
+        <!-- Баланс -->
+        <Label Content="Баланс:" Grid.Row="2"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Width="200"/>
+
+        <!-- Дата открытия -->
+        <Label Content="Дата открытия:" Grid.Row="3"/>
+        <DatePicker Grid.Row="3" Grid.Column="1" Width="200"/>
+
+        <!-- Владелец -->
+        <Label Content="ФИО владельца:" Grid.Row="4"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Width="200"/>
+
+        <!-- Паспортные данные -->
+        <Label Content="Паспортные данные:" Grid.Row="5"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Width="200"/>
+
+        <!-- Подключение SMS оповещения -->
+        <CheckBox Content="Подключение SMS оповещения" Grid.Row="6" Grid.ColumnSpan="2"/>
+
+        <!-- Подключение интернет-банкинга -->
+        <CheckBox Content="Подключение интернет-банкинга" Grid.Row="7" Grid.ColumnSpan="2"/>
+
+        <!-- Кнопки для сохранения и отображения данных -->
+        <Button Content="Сохранить" Grid.Row="8" Grid.Column="0" Click="SaveButton_Click" Margin="0,0,0,89"/>
+        <Button Content="Отобразить данные" Grid.Row="8" Click="ShowDataButton_Click" Margin="0,31,0,60"/>
+
+        <ListBox x:Name="dataListBox" Grid.Row="8" Margin="10,65,10,-128"/>
+
+    </Grid>
+</Window>
